@@ -1,0 +1,540 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+header nav {
+  z-index: 1000;
+  padding: 10px 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  background: black;
+  color: white;
+}
+
+header nav #logo {
+  min-width: 10vw;
+  width: 20vw;
+}
+
+header #logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.navPart {
+  min-width: 80vw;
+  width: 90vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navPart .fa-bars,
+.navPart .fa-xmark {
+  display: none;
+}
+
+#navItems ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+}
+
+nav #SearchBox input[type="text"] {
+  padding: 5px 10px;
+  border: 1px solid black;
+  outline: none;
+}
+
+nav #SearchBox input[type="submit"] {
+  padding: 5px 10px;
+  border: 1px solid black;
+  outline: none;
+  cursor: pointer;
+  background-color: chartreuse;
+}
+
+/* Hero section */
+#about {
+  padding: 20px;
+  height: calc(100vh - 85px);
+  width: 100vw;
+  display: flex;
+  background-image: url("/assets/images/hero_image.jpg");
+  align-items: center;
+  background-size: cover;
+}
+
+#left {
+  padding: 0 20px;
+  width: 100%;
+}
+
+#left #content {
+  display: block;
+  margin: 0 auto;
+  padding: 50px 15px;
+}
+
+#left h1 {
+  font-family: sans-serif;
+  font-size: 32px;
+  color: white;
+}
+
+#left p {
+  font-family: sans-serif;
+  font-size: 20px;
+  margin: 15px 0;
+  text-align: justify;
+  min-width: 70%;
+  width: 50%;
+  color: white;
+}
+
+#left #buttons button {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid black;
+  outline: none;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#left #buttons .resumeBtn {
+  background-color: bisque;
+}
+
+#left #buttons .projectBtn {
+  background-color: chartreuse;
+  font-weight: bold;
+}
+
+#right {
+  padding: 0 20px;
+  width: 50%;
+}
+
+#right form {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  background-color: white;
+  padding: 50px 30px;
+  border-radius: 8px;
+  border: 1px solid black;
+  outline: none;
+}
+
+#right form h3 {
+  font-family: sans-serif;
+  font-size: 30px;
+  color: chartreuse;
+  margin-bottom: 20px;
+}
+#right form fieldset {
+  margin-bottom: 20px;
+}
+
+#right form fieldset,
+#right form legend {
+  padding: 20px 10px;
+  color: chartreuse;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+#right form input {
+  display: block;
+  padding: 10px 10px;
+  border: 1px solid black;
+  width: 100%;
+}
+
+#right form input[type="email"] {
+  margin-bottom: 20px;
+}
+
+#right form input[type="submit"] {
+  margin-bottom: 20px;
+  cursor: pointer;
+  background-color: chartreuse;
+  font-weight: bold;
+}
+
+/* skills */
+#skills,
+#projects,
+#contact {
+  padding: 50px 20px;
+  border-bottom: 1px solid grey;
+}
+
+#skills h4,
+#projects h4,
+#contact h4 {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+#skills .container,
+#projects .container {
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+#skills .container .card,
+#projects .container .card {
+  border: 1px solid black;
+  padding: 20px 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#skills .container .card:hover,
+#projects .container .card:hover {
+  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.4);
+}
+
+#skills .content p {
+  padding: 0 10px;
+}
+
+/* Projects */
+#projects .container .card .img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#projects .container .card .img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Contact */
+#contact .container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#contact .container form {
+  width: 60%;
+  padding: 25px 50px;
+  border-radius: 8px;
+  border: 1px solid grey;
+}
+
+#contact .container form input,
+#contact .container form label {
+  display: block;
+  outline: none;
+}
+#contact .container form input,
+#contact .container form input[type="submit"],
+#contact .container form textarea {
+  padding: 5px 10px;
+}
+
+#contact .container form input[type="submit"] {
+  cursor: pointer;
+  background-color: chartreuse;
+  font-weight: bold;
+}
+
+#contact .container form label {
+  font-size: 20px;
+  font-family: sans-serif;
+  margin-bottom: 10px;
+}
+
+#contact .container form input,
+#contact .container form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-family: sans-serif;
+  resize: none;
+  border: 1px solid grey;
+  outline: none;
+}
+
+footer {
+  padding: 20px;
+  background-color: chartreuse;
+  text-align: center;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+@media screen and (min-width: 600px) and (max-width: 850px) {
+  header nav {
+    padding: 10px 50px;
+  }
+
+  nav .navPart {
+    padding: 0 20px;
+    justify-content: flex-end;
+  }
+
+  .navPart #navItems,
+  .navPart #SearchBox {
+    display: none;
+  }
+
+  .navPart .fa-bars {
+    display: block;
+  }
+
+  /* Hero Section */
+  #left h1 {
+    font-size: 25px;
+  }
+
+  #left p {
+    font-size: 18px;
+    width: 50vw;
+    margin: 10px 0;
+  }
+  /* Skills */
+  #skills,
+  #projects,
+  #contact {
+    padding: 25px 10px;
+  }
+
+  #skills h4,
+  #projects h4,
+  #contact h4 {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+
+  #skills .container,
+  #projects .container {
+    padding: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+  }
+
+  #skills .container .card,
+  #projects .container .card {
+    padding: 10px 5px;
+    margin-bottom: 10px;
+  }
+
+  #skills .content p {
+    padding: 0 5px;
+  }
+
+  /* Projects */
+  #projects .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  /* Contact */
+  #contact .container {
+    padding: 10px;
+  }
+
+  #contact .container form {
+    width: 70%;
+    padding: 25px 25px 16px;
+    border-radius: 4px;
+  }
+
+  #contact .container form input,
+  #contact .container form input[type="submit"],
+  #contact .container form textarea {
+    font-size: 12px;
+    margin-bottom: 0;
+    font-weight: normal;
+    padding: 2px 5px;
+  }
+
+  #contact .container form label {
+    font-size: 15px;
+    font-family: sans-serif;
+    margin-bottom: 5px;
+  }
+
+  #contact .container form input,
+  #contact .container form textarea {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  footer{
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  header nav {
+    padding: 5px 25px;
+  }
+
+  nav .navPart {
+    padding: 0 10px;
+    justify-content: flex-end;
+  }
+
+  .navPart #navItems,
+  .navPart #SearchBox {
+    display: none;
+  }
+
+  .navPart .fa-bars {
+    display: block;
+  }
+
+  /* Hero Section */
+  #about{
+    padding: 10px;
+  }
+
+  #left h1 {
+    font-size: 18px;
+  }
+
+  #left p {
+    font-size: 14px;
+    margin: 7px 0;
+  }
+
+  #left #buttons{
+    width: 30%;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #left #buttons button{
+    padding: 5px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+
+  #left #buttons button.resumeBtn{
+    margin-bottom: 5px;
+  }
+
+  /* Skills */
+  #skills,
+  #projects,
+  #contact {
+    padding: 17px 5px;
+  }
+
+  #skills h4,
+  #projects h4,
+  #contact h4 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  #skills .content h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  #skills .container,
+  #projects .container {
+    padding: 5px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  #skills .container .card,
+  #projects .container .card {
+    padding: 10px 5px;
+    margin-bottom: 5px;
+  }
+
+  #skills .content p {
+    padding: 0 8px;
+  }
+
+  /* Contact */
+  #contact .container {
+    padding: 10px;
+  }
+
+  #contact .container form {
+    width: 90%;
+    padding: 25px 25px 16px;
+    border-radius: 4px;
+  }
+
+  #contact .container form input,
+  #contact .container form input[type="submit"],
+  #contact .container form textarea {
+    font-size: 12px;
+    margin-bottom: 0;
+    font-weight: normal;
+    padding: 2px 5px;
+  }
+
+  #contact .container form label {
+    font-size: 15px;
+    font-family: sans-serif;
+    margin-bottom: 5px;
+  }
+
+  #contact .container form input,
+  #contact .container form textarea {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  footer{
+    padding: 10px;
+    font-size: 14px;
+  }
+}

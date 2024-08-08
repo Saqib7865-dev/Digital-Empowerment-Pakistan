@@ -77,7 +77,7 @@ header #logo img {
   height: calc(100vh - 85px);
   width: 100vw;
   display: flex;
-  background: url("/assets/images/hero_image.jpg") rgba(0, 0, 0, 0.2);
+  background: url("../assets/images/hero_image.jpg") rgba(0, 0, 0, 0.2);
   background-blend-mode: darken;
   align-items: center;
   background-size: cover;

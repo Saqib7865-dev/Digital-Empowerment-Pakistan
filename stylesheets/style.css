@@ -6,7 +6,9 @@
 
 html,
 body {
+  width: 100vw;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 li {
@@ -21,6 +23,7 @@ a {
 }
 
 header {
+  width: 100%;
   position: sticky;
   top: 0;
 }
@@ -187,7 +190,7 @@ h4.heading{
 /* Contact */
 #contact .container {
   width: 100%;
-  padding: 20px;
+  padding: 40px 20px;
   display: flex;
   justify-content: center;
   align-items: center;

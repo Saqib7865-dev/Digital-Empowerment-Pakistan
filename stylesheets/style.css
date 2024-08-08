@@ -6,18 +6,17 @@
 
 html,
 body {
-  height: 100vh;
-  width: 100vw;
   scroll-behavior: smooth;
 }
 
 li {
   list-style-type: none;
+  font-weight: bold;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-family: sans-serif;
 }
 
@@ -27,20 +26,19 @@ header {
 }
 
 header nav {
-  z-index: 1000;
+  position: sticky;
+  top: 0;
   padding: 10px 100px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid black;
-  background: black;
+  background: chartreuse;
   color: white;
 }
 
 header nav #logo {
   min-width: 10vw;
-  width: 20vw;
 }
 
 header #logo img {
@@ -52,10 +50,8 @@ header #logo img {
 }
 
 .navPart {
-  min-width: 80vw;
-  width: 90vw;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -72,27 +68,14 @@ header #logo img {
   font-size: 18px;
 }
 
-nav #SearchBox input[type="text"] {
-  padding: 5px 10px;
-  border: 1px solid black;
-  outline: none;
-}
-
-nav #SearchBox input[type="submit"] {
-  padding: 5px 10px;
-  border: 1px solid black;
-  outline: none;
-  cursor: pointer;
-  background-color: chartreuse;
-}
-
 /* Hero section */
 #about {
   padding: 20px;
   height: calc(100vh - 85px);
   width: 100vw;
   display: flex;
-  background-image: url("/assets/images/hero_image.jpg");
+  background: url("/assets/images/hero_image.jpg") rgba(0, 0, 0, 0.2);
+  background-blend-mode: darken;
   align-items: center;
   background-size: cover;
 }
@@ -143,65 +126,11 @@ nav #SearchBox input[type="submit"] {
   font-weight: bold;
 }
 
-#right {
-  padding: 0 20px;
-  width: 50%;
-}
-
-#right form {
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-  display: block;
-  margin: 0 auto;
-  width: 80%;
-  background-color: white;
-  padding: 50px 30px;
-  border-radius: 8px;
-  border: 1px solid black;
-  outline: none;
-}
-
-#right form h3 {
-  font-family: sans-serif;
-  font-size: 30px;
-  color: chartreuse;
-  margin-bottom: 20px;
-}
-#right form fieldset {
-  margin-bottom: 20px;
-}
-
-#right form fieldset,
-#right form legend {
-  padding: 20px 10px;
-  color: chartreuse;
-  font-size: 16px;
-  font-family: sans-serif;
-}
-
-#right form input {
-  display: block;
-  padding: 10px 10px;
-  border: 1px solid black;
-  width: 100%;
-}
-
-#right form input[type="email"] {
-  margin-bottom: 20px;
-}
-
-#right form input[type="submit"] {
-  margin-bottom: 20px;
-  cursor: pointer;
-  background-color: chartreuse;
-  font-weight: bold;
-}
-
 /* skills */
 #skills,
 #projects,
 #contact {
   padding: 50px 20px;
-  border-bottom: 1px solid grey;
 }
 
 #skills h4,
@@ -209,7 +138,6 @@ nav #SearchBox input[type="submit"] {
 #contact h4 {
   font-family: sans-serif;
   text-align: center;
-  font-size: 32px;
   margin-bottom: 30px;
 }
 
@@ -263,7 +191,7 @@ nav #SearchBox input[type="submit"] {
 }
 
 #contact .container form {
-  width: 60%;
+  width: 100%;
   padding: 25px 50px;
   border-radius: 8px;
   border: 1px solid grey;
@@ -321,12 +249,7 @@ footer {
     justify-content: flex-end;
   }
 
-  .navPart #navItems,
-  .navPart #SearchBox {
-    display: none;
-  }
-
-  .navPart .fa-bars {
+  .navPart .fa-xmark {
     display: block;
   }
 
@@ -347,10 +270,13 @@ footer {
     padding: 25px 10px;
   }
 
+  .heading {
+    font-size: 50px;
+  }
+
   #skills h4,
   #projects h4,
   #contact h4 {
-    font-size: 25px;
     margin-bottom: 15px;
   }
 
@@ -383,7 +309,7 @@ footer {
   }
 
   #contact .container form {
-    width: 70%;
+    width: 100%;
     padding: 25px 25px 16px;
     border-radius: 4px;
   }
@@ -409,59 +335,96 @@ footer {
     font-size: 15px;
   }
 
-  footer{
+  footer {
     padding: 10px;
     font-size: 14px;
   }
 }
 
-@media screen and (min-width: 200px) and (max-width: 600px) {
+@media screen and (min-width: 200px) and (max-width: 599px) {
   header nav {
     padding: 5px 25px;
+    position: relative;
   }
 
   nav .navPart {
     padding: 0 10px;
     justify-content: flex-end;
+    /* color: white; */
   }
 
-  .navPart #navItems,
-  .navPart #SearchBox {
-    display: none;
+  #navItems ul {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: absolute;
+    top: 25px;
+    right: -250px;
+    background-color: chartreuse;
+    opacity: 0.9;
+    padding: 100px 75px;
+    transition: all 0.4s ease-in-out;
+  }
+
+  #navItems ul li:hover {
+    text-align: center;
+    width: 100%;
+    background-color: chartreuse;
+  }
+
+  #navItems ul li a {
+    font-size: 20px;
+    color: black;
+  }
+
+  #navItems ul a {
+    color: black;
   }
 
   .navPart .fa-bars {
     display: block;
   }
 
+  .navPart .fa-xmark {
+    display: none;
+    position: absolute;
+    align-items: flex-start;
+    justify-content: start;
+    right: 30px;
+    color: black;
+    font-size: 20px;
+    z-index: 22;
+  }
+
   /* Hero Section */
-  #about{
+  #about {
     padding: 10px;
   }
 
   #left h1 {
-    font-size: 18px;
+    font-size: 23px;
   }
 
   #left p {
-    font-size: 14px;
-    margin: 7px 0;
+    font-size: 17px;
+    text-align: justify;
+    margin: 12px 0;
   }
 
-  #left #buttons{
-    width: 30%;
+  #left #buttons {
+    width: 40%;
     min-width: 120px;
     display: flex;
     flex-direction: column;
   }
 
-  #left #buttons button{
-    padding: 5px 6px;
+  #left #buttons button {
+    padding: 8px 10px;
     border-radius: 4px;
-    font-size: 12px;
+    font-size: 14px;
   }
 
-  #left #buttons button.resumeBtn{
+  #left #buttons button.resumeBtn {
     margin-bottom: 5px;
   }
 
@@ -472,10 +435,13 @@ footer {
     padding: 17px 5px;
   }
 
+  h4.heading {
+    font-size: 30px;
+  }
+
   #skills h4,
   #projects h4,
   #contact h4 {
-    font-size: 22px;
     margin-bottom: 12px;
   }
 
@@ -507,7 +473,6 @@ footer {
   }
 
   #contact .container form {
-    width: 90%;
     padding: 25px 25px 16px;
     border-radius: 4px;
   }
@@ -533,7 +498,7 @@ footer {
     font-size: 15px;
   }
 
-  footer{
+  footer {
     padding: 10px;
     font-size: 14px;
   }

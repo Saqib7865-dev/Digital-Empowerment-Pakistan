@@ -17,22 +17,16 @@
           <a href="#"><img src="./assets/images/logo.jpg" alt="logo" /></a>
         </div>
         <div class="navPart">
-          <i class="fa-solid fa-bars"></i>
-          <i class="fa-solid fa-xmark"></i>
+          <i class="fa-solid fa-bars" id="hamburger"></i>
           <div id="navItems">
-            <ul>
+            <i class="fa-solid fa-xmark" id="close"></i>
+            <ul id="Items">
               <li><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#skills">Skills</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
-          </div>
-          <div id="SearchBox">
-            <form action="">
-              <input type="text" id="srch" />
-              <input type="submit" value="Search" />
-            </form>
           </div>
         </div>
       </nav>
@@ -57,20 +51,9 @@
             </div>
           </div>
         </div>
-        <!-- <div id="right">
-          <form action="">
-            <h3>Register Yourself</h3>
-            <fieldset>
-              <legend>Personal Infomation</legend>
-              <input type="email" id="email" placeholder="Enter your email" />
-              <input type="text" id="pass" placeholder="Enter your password" />
-            </fieldset>
-            <input type="submit" value="Register" />
-          </form>
-        </div> -->
       </section>
       <section id="skills">
-        <h4>Skills</h4>
+        <h4 class="heading">Skills</h4>
         <div class="container">
           <div class="card">
             <div class="content">
@@ -131,80 +114,99 @@
         </div>
       </section>
       <section id="projects">
-        <h4>Projects</h4>
+        <h4 class="heading">Projects</h4>
         <div class="container">
           <div class="card">
-            <div class="img">
-              <img
-                src="./assets/images/Project_1.png"
-                alt="Multi Selection Accordian Project"
-              />
-            </div>
-            <div class="content">
-              <h4>Single and Multi selection Accordian</h4>
-              <p>
-                Single and Multi Selection Accordian is completely based on
-                react library in which I solidified multiple react concepts.
-              </p>
-            </div>
+            <a
+              href="https://github.com/Saqib7865-dev/Accordian.git"
+              target="_blank"
+            >
+              <div class="img">
+                <img
+                  src="./assets/images/Project_1.png"
+                  alt="Multi Selection Accordian Project"
+                />
+              </div>
+              <div class="content">
+                <h4>Single and Multi selection Accordian</h4>
+                <p>
+                  Single and Multi Selection Accordian is completely based on
+                  react library in which I solidified multiple react concepts.
+                </p>
+              </div>
+            </a>
           </div>
           <div class="card">
-            <div class="img">
-              <img
-                src="./assets/images/Project_2.png"
-                alt="Random color generator"
-              />
-            </div>
-            <div class="content">
-              <h4>Random Color Generator</h4>
-              <p>
-                Random Color Generator is completely based on react library in
-                which I solidified multiple react concepts.
-              </p>
-            </div>
+            <a
+              href="https://github.com/Saqib7865-dev/Random-Color-generator-using-react.git"
+              target="_blank"
+            >
+              <div class="img">
+                <img
+                  src="./assets/images/Project_2.png"
+                  alt="Random color generator"
+                />
+              </div>
+              <div class="content">
+                <h4>Random Color Generator</h4>
+                <p>
+                  Random Color Generator is completely based on react library in
+                  which I solidified multiple react concepts.
+                </p>
+              </div>
+            </a>
           </div>
           <div class="card">
-            <div class="img">
-              <img src="./assets/images/Project_3.png" alt="" />
-            </div>
-            <div class="content">
-              <h4>Password Generator</h4>
-              <p>
-                Password Generator is completely based on react library in which
-                I solidified multiple react concepts.
-              </p>
-            </div>
+            <a
+              href="https://github.com/Saqib7865-dev/Password-Generator.git"
+              target="_blank"
+            >
+              <div class="img">
+                <img src="./assets/images/Project_3.png" alt="" />
+              </div>
+              <div class="content">
+                <h4>Password Generator</h4>
+                <p>
+                  Password Generator is completely based on react library in
+                  which I solidified multiple react concepts.
+                </p>
+              </div>
+            </a>
           </div>
           <div class="card">
-            <div class="img">
-              <img src="./assets/images/Project_4.png" alt="" />
-            </div>
-            <div class="content">
-              <h4>Quiz App</h4>
-              <p>
-                Quiz App is completely based on HTML, pure CSS and Javascript in
-                which I solidified multiple Javascript concepts.
-              </p>
-              <div class="level"></div>
-            </div>
+            <a href="https://github.com/Saqib7865-dev/Quiz-App.git" target="_blank">
+              <div class="img">
+                <img src="./assets/images/Project_4.png" alt="" />
+              </div>
+              <div class="content">
+                <h4>Quiz App</h4>
+                <p>
+                  Quiz App is completely based on HTML, pure CSS and Javascript in
+                  which I solidified multiple Javascript concepts.
+                </p>
+                <div class="level"></div>
+              </div>
+            </a>
           </div>
           <div class="card">
-            <div class="img">
-              <img src="./assets/images/Project_4.jpg" alt="" />
+            <a href="https://github.com/Saqib7865-dev/Todo-list-App.git" target="_blank">
+              <div class="img">
+                <img src="./assets/images/Project_4.jpg" alt="" />
+              </div>
+              <div class="content">
+                <h4>To do list App</h4>
+                <p>
+                  To do list App is completely based on HTML, pure CSS and
+                  Javascript in which I solidified multiple Javascript concepts.
+                </p>
+                <div class="level"></div>
+              </div>
             </div>
-            <div class="content">
-              <h4>To do list App</h4>
-              <p>
-                To do list App is completely based on HTML, pure CSS and
-                Javascript in which I solidified multiple Javascript concepts.
-              </p>
-              <div class="level"></div>
-            </div>
-          </div>
+            </a>
         </div>
       </section>
       <section id="contact">
-        <h4>Contact Form</h4>
+        <h4 class="heading">Contact Form</h4>
         <div class="container">
           <form action="">
             <label for="fname">First Name</label>
@@ -225,5 +227,6 @@
     <footer>
       <p>@2024 Muhammad Saqib Ali. FirstTaskCompleted</p>
     </footer>
+    <script src="./Javascript/app.js"></script>
   </body>
 </html>

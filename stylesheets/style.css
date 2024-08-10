@@ -8,7 +8,6 @@ html,
 body {
   width: 100vw;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 li {
@@ -361,7 +360,7 @@ footer {
   }
 
   #navItems ul {
-    display: flex;
+    display: none;
     flex-direction: column;
     height: 100vh;
     position: absolute;

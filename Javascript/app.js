@@ -3,6 +3,7 @@ let close = document.getElementById("close")
 let Items = document.getElementById("Items");
 close.style.display = "none";
 bars.addEventListener("click",()=>{
+    Items.style.display = "flex"
     Items.style.right = "0"
     bars.style.display = "none";
     close.style.display = "block";
@@ -10,6 +11,7 @@ bars.addEventListener("click",()=>{
 
 close.addEventListener("click",()=>{
     Items.style.right = "-250px"
+    Items.style.display = "none"
     bars.style.display = "block";
     close.style.display = "none";
 })
